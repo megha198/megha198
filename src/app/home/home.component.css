@@ -1,0 +1,46 @@
+/* https://www.bing.com/images/search?q=Weather+Forecast+Symbols+Partly+Sunny&form=IRIBIP&first=1&tsc=ImageBasicHover */
+h1{
+    text-align: center;
+    background-color:black;
+}
+select {
+    width: 50%;
+    padding: 16px 20px;
+    
+    background-color:pink;
+   
+     margin: initial;
+
+  }
+  img {
+      justify-content: center;
+      
+  }
+  .custom-select-sm{
+      align-content: center;
+      justify-content: center;
+    
+
+  }
+  ul{
+    justify-content: right;
+}
+  
+  .nav-item{
+      justify-content: left;
+  }
+  
+  option{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .responsive {
+    width: 100%;
+    height: 20%;
+  }
+  container-sm{
+      max-width: initial;
+      max-height: initial;
+  }
+

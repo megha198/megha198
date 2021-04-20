@@ -1,0 +1,69 @@
+<h1 class="text-white"> Weather App</h1>
+<div class="container"></div>
+<!-- <img src="https://pluspng.com/img-png/sunny-sky-png-beautiful-sea-on-sunny-day-with-blue-sky-reflecting-in-water-beautiful-sea-horizon-sunshine-blue-sky-with-fluffy-clouds-and-water-reflection-1920.png"  class="responsive" width="500" height="200"> -->
+<!-- <nav class="nav nav-tabs justify-content-center"> -->
+    <!-- <ul class="nav">
+        <li class="nav-item"><a [routerLink]="['setting']" class="nav-link"> <h3 >Setting</h3></a></li> -->
+        <!-- <li class="nav-item"><a [routerLink]="['home']" class="nav-link"> <h3 >home</h3></a></li> -->
+        <!-- <li class="nav-item"> <a [routerLink]="['forecast']" class="nav-link"><h3 >ForeCast</h3></a></li> -->
+    <!-- </ul> -->
+<!-- </nav> -->
+
+<!-- <div class="container"> -->
+    <img src="https://tse2.mm.bing.net/th/id/OIP.yYR1IBWsBMMO2P3pI5BtnAHaHa?w=176&h=180&c=7&o=5&pid=1.7"
+        class="rounded x-auto d-block">
+    <div class="form-group">
+        <select  (change)="selectChangeHandler($event)" class="form-control"> 
+            <option *ngFor="let city of cities"  value={{city}}></option>
+            <label>Select city</label>
+
+            <option value="bangalore">bangalore</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Mysore">Mysore</option>
+            <option value="New Delhi">New Delhi</option>
+            <option value=" Hyderabad">Hyderabad</option>
+        </select>
+    </div>
+    <!-- <p><span>You Selected :</span><b>{{selectedCity}}</b></p> -->
+    <div class="container-sm" *ngIf="set;else currentWeather">
+        <p>
+            CityName:{{cityWeather.name}}<br>
+            Temperature:{{cityWeather.main.temp}}<br>
+            Humidity:{{cityWeather.main.humidity}}<br>
+            Pressure:{{cityWeather.main.pressure}}<br>
+
+        </p>
+    </div>
+    
+      <div class="container-sm" *ngFor="let city of nextCityWeather;index as i">
+        <div *ngIf="i%8==0">
+            <h6>
+                day:{{(i/8)+1}}
+                
+            </h6>
+             
+             <img src="https://tse2.mm.bing.net/th/id/OIP.yYR1IBWsBMMO2P3pI5BtnAHaHa?w=176&h=180&c=7&o=5&pid=1.7" class="d-flex justify-content-center">
+             date:{{city.dt_txt}}<br>
+            Temperature:{{city.main.temp}}<br>
+            Pressure:{{city.main.pressure}}<br>
+            Humidity:{{city.main.humidity}}<br>
+            Pressure:{{city.main.pressure}}
+
+        </div>
+        
+    </div> 
+    <!-- <nav class="nav nav-tabs justify-content-center">
+    <ul class="nav">
+        <li class="nav-item"><a [routerLink]="['setting']" class="nav-link"> <h3 >Setting</h3></a></li>
+    </ul> 
+        </nav> -->
+
+
+    <!-- <div class="container-sm" #current>
+        <p>
+            CityName:{{currentWeather.Name}}<br>
+            Temperature:{{currentWeather.main.temp}<br>
+            Humidity:{{currentWeather.main.huidity}}<br>
+            Pressure:{{currentWeather.main.pressure}}<br>
+            </p>
+    </div> -->
